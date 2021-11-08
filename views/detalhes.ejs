@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>POKEDEX</title>
+</head>
+
+<body class="bg">
+    <nav>
+        
+        <ul>
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#cadastro">Cadastro</a>
+            </li>
+            <li>
+                <a href="#detalhes">Detalhes</a>
+            </li>
+        </ul>
+    </nav>
+    
+    <header>
+        <article>
+
+            <h1>P O K E D E X</h1>
+            
+            
+        </article>
+
+        
+    </header>
+   
+ 
+   
+</body>
+<main class="index-detalhes">
+    <% pokedex.forEach((pokedex, find) => { %>
+    <section class="divisao-detalhes">
+        <article class="detalhes-conteudo">
+            <img class="img" src="<%= pokedex.imagem %>">
+            <p class="infonome"> Nome: <%= pokedex.nome %></p>
+            <p class="infotipo"> Tipo: <%= pokedex.tipo %></p>
+            <p class="infonum"> Numero: <%= pokedex.numero %></p>
+            <p class="infodes"> Descrição: <%= pokedex.descricao %></p>
+            <p class="infoaltura">Altura: <%= pokedex.altura %></p>
+            <p class="infopeso"> Peso: <%= pokedex.peso %></p>
+            <p class="infocateg"> Categoria: <%= pokedex.categoria %></p>
+            <p class="infohab"> Habilidade: <%= pokedex.habilidade %></p>
+        </article>
+    </section>
+    <% }) %>
+
+</main>
+<script src="/js/script.js"></script>
+</html>
