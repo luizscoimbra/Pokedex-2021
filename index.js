@@ -3,7 +3,6 @@ const path = require("path");
 
 const app = express();
 app.use(express.urlencoded());
-const port = 3000;
 
 const pokedex = [];
 
