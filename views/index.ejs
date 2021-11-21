@@ -11,23 +11,16 @@
 
 <body class="bg">
     <nav>
+        <form>
+            <a href="/cadastro">
+                <input type="button" class="btn btn3 round3" value="Cadastrar">
+            </a>
         
-        <ul>
-            <li>
-                <a href="/index.ejs">Home</a>
-            </li>
-            <li>
-                <a href="/cadastro.ejs">Cadastro</a>
-            </li>
-            <li>
-                <a href="/detalhes.ejs">Detalhes</a>
-            </li>
-        </ul>
     </nav>
     
     <header>
         <article>
-
+            
             <h1>P O K E D E X</h1>
             
             
@@ -35,20 +28,21 @@
 
         
     </header>
-    <main class="index">
-        <% pokedex.forEach((pokedex, find) => { %>
+    
+    <section id="index">
+    <main id="detalhes" class="index-detalhes">
+        
         <section class="containerCard">
-          <article class="card_content">
-        <a class= "linken" href="/detalhes/<%= find %>"
-              ><img class="img" src="<%= pokedex.imagem %>"
-            />
-            <h2 class="nomeHome"><%= pokedex.nome %></h2>
-            <h4 class="tipoHome"><%= pokedex.tipo %></h4>
-       </a>
-
-          </article>
-        </section>
+        <article class="card_content">
+        <% pokedex.forEach((pokedex, find) => { %>
+        <a class= "linken" href="/detalhes/<%= find %>"><img class="img" src="<%= pokedex.imagem %>" width="200" height="200"/>
+        <h2 class="nomeHome"><%= pokedex.nome %></h2>
+        <h4 class="tipoHome"><%= pokedex.tipo %></h4>
         <% }) %>
+       </a>
+        </article>
+        </section>
+        
       </main>
  
    

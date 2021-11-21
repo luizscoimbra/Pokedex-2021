@@ -12,12 +12,10 @@
 <body class="bg">
     <nav>
         
-        <ul>
-            <li>
-                <a href="#">Home</a>
-            </li>
-            
-        </ul>
+        <form>
+            <a href="http://localhost:3000/">
+                <input type="button" class="btn btn3 round3" value="Home">
+            </a>
     </nav>
     
     <header>
@@ -34,11 +32,14 @@
  
    
 </body>
-<main class="index-detalhes">
-    <% pokedex.forEach((pokedex, find) => { %>
+<section id="detalhes">
+<form action="/subscription" method="POST">
+<main id="detalhes" class="index-detalhes">
+    
     <section class="divisao-detalhes">
         <article class="detalhes-conteudo">
-            <img class="img" src="<%= pokedex.imagem %>">
+            <% pokedex.forEach((pokedex, find) => { %>
+            <img id="imagem" class="img" src="<%= pokedex.imagem %>" width="200" height="200" >
             <p class="infonome"> Nome: <%= pokedex.nome %></p>
             <p class="infotipo"> Tipo: <%= pokedex.tipo %></p>
             <p class="infonum"> Numero: <%= pokedex.numero %></p>
@@ -47,9 +48,10 @@
             <p class="infopeso"> Peso: <%= pokedex.peso %></p>
             <p class="infocateg"> Categoria: <%= pokedex.categoria %></p>
             <p class="infohab"> Habilidade: <%= pokedex.habilidade %></p>
+            <% }) %>
         </article>
     </section>
-    <% }) %>
+    
 
 </main>
 <script src="/js/script.js"></script>
